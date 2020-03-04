@@ -14,8 +14,6 @@ namespace API
 {
     public class Program
     {
-
-        //git test hmm.
         public static void Main(string[] args)
         {
             var host =  CreateHostBuilder(args).Build();
