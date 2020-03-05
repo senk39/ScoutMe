@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Persistence;
 
 namespace Persistence.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20200305111235_IdolCharactersV3")]
+    partial class IdolCharactersV3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -34,8 +36,8 @@ namespace Persistence.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Group")
-                        .HasColumnType("TEXT");
+                    b.Property<int?>("Group")
+                        .HasColumnType("INTEGER");
 
                     b.Property<byte?>("HipsSize")
                         .HasColumnType("INTEGER");
@@ -49,8 +51,8 @@ namespace Persistence.Migrations
                     b.Property<string>("NameJp")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("SchoolClass")
-                        .HasColumnType("TEXT");
+                    b.Property<int?>("SchoolClass")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("SeiyuuEng")
                         .HasColumnType("TEXT");
@@ -58,8 +60,8 @@ namespace Persistence.Migrations
                     b.Property<string>("SeiyuuJp")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Subunit")
-                        .HasColumnType("TEXT");
+                    b.Property<int?>("Subunit")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("SurnameEng")
                         .HasColumnType("TEXT");

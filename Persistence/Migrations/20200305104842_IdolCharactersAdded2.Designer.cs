@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Persistence;
 
 namespace Persistence.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20200305104842_IdolCharactersAdded2")]
+    partial class IdolCharactersAdded2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -22,10 +24,10 @@ namespace Persistence.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime?>("Birthday")
+                    b.Property<DateTime>("Birthday")
                         .HasColumnType("TEXT");
 
-                    b.Property<byte?>("BustSize")
+                    b.Property<byte>("BustSize")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Color")
@@ -34,10 +36,7 @@ namespace Persistence.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Group")
-                        .HasColumnType("TEXT");
-
-                    b.Property<byte?>("HipsSize")
+                    b.Property<byte>("HipsSize")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("NameDefault")
@@ -49,16 +48,10 @@ namespace Persistence.Migrations
                     b.Property<string>("NameJp")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("SchoolClass")
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("SeiyuuEng")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("SeiyuuJp")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Subunit")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("SurnameEng")
@@ -67,7 +60,7 @@ namespace Persistence.Migrations
                     b.Property<string>("SurnameJp")
                         .HasColumnType("TEXT");
 
-                    b.Property<byte?>("WaistSize")
+                    b.Property<byte>("WaistSize")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
