@@ -16,11 +16,11 @@ namespace Domain
         public string SurnameJp { get; set; }
         public DateTime ? Birthday { get; set; }
         
-        public string ? Group { get; set; }
+        public string Group { get; set; }
 
-        public string ? Subunit { get; set; }
+        public string Subunit { get; set; }
 
-        public string ? SchoolClass { get; set; }
+        public string SchoolClass { get; set; }
         
         public byte ? BustSize { get; set; }
         public byte ?  WaistSize { get; set; }
