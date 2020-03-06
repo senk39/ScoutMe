@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
 import { Header, Icon } from 'semantic-ui-react'
@@ -27,10 +26,10 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <Header idols="h2" icon>
-            <Icon name="users" />
-            ScoutMe
-            <Header.Subheader>
-              Idolkowy serwis społecznościowy. I Ty możesz uratować swoją szkołę!
+            <Icon name="users" id="headericon" />
+            <div id="headerTitle" >ScoutMe</div> 
+            <Header.Subheader id="subheader">
+              <div id="headerDescription">Idolkowy serwis społecznościowy. I Ty możesz uratować swoją szkołę!</div>
             </Header.Subheader>
           </Header>
          
@@ -38,7 +37,7 @@ class App extends Component {
           <div>
             <ul>
               {this.state.values.map((value: any) => (
-                <h3><li key={value.id}>{value.name}</li></h3>
+                <li key={value.id}>{value.name}</li>
               ))}
             </ul>
           </div>
