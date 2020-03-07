@@ -20,12 +20,12 @@ namespace Domain
 
         public string Subunit { get; set; }
 
-        public string SchoolClass { get; set; }
+        public int ? YearOfSchoool { get; set; }
         
-        public byte ? BustSize { get; set; }
-        public byte ?  WaistSize { get; set; }
+        public int ? BustSize { get; set; }
+        public int ?  WaistSize { get; set; }
 
-        public byte ?  HipsSize { get; set; }
+        public int ?  HipsSize { get; set; }
 
         public string SeiyuuEng { get; set; }
         public string SeiyuuJp { get; set; }

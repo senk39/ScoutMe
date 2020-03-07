@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Domain;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,7 +13,7 @@ namespace Persistence
         }
         public DbSet<Value> Values { get; set; }
 
-        public DbSet<IdolCharacter> IdolCharacters {get; set;}
+        public DbSet<IdolCharacter> IdolCharacters {get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
