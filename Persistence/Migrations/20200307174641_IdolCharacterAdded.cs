@@ -21,6 +21,7 @@ namespace Persistence.Migrations
                     Group = table.Column<string>(nullable: true),
                     Subunit = table.Column<string>(nullable: true),
                     YearOfSchoool = table.Column<int>(nullable: true),
+                    Height = table.Column<int>(nullable: true),
                     BustSize = table.Column<int>(nullable: true),
                     WaistSize = table.Column<int>(nullable: true),
                     HipsSize = table.Column<int>(nullable: true),

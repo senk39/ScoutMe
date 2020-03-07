@@ -21,6 +21,8 @@ namespace Domain
         public string Subunit { get; set; }
 
         public int ? YearOfSchoool { get; set; }
+
+        public int ? Height { get; set; }
         
         public int ? BustSize { get; set; }
         public int ?  WaistSize { get; set; }

@@ -9,7 +9,7 @@ using Persistence;
 namespace Persistence.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20200307165912_IdolCharacterAdded")]
+    [Migration("20200307174641_IdolCharacterAdded")]
     partial class IdolCharacterAdded
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -38,6 +38,9 @@ namespace Persistence.Migrations
 
                     b.Property<string>("Group")
                         .HasColumnType("TEXT");
+
+                    b.Property<int?>("Height")
+                        .HasColumnType("INTEGER");
 
                     b.Property<int?>("HipsSize")
                         .HasColumnType("INTEGER");
