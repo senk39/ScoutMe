@@ -13,6 +13,8 @@ namespace Persistence
         }
         public DbSet<Value> Values { get; set; }
 
+        public DbSet<IdolCharacter> IdolCharacters {get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<Value>()
