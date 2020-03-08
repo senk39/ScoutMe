@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Persistence.Migrations
 {
-    public partial class IdolCharacterAdded : Migration
+    public partial class AllIdolCharacters : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
