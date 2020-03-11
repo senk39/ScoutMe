@@ -1,27 +1,24 @@
-import React, {Component} from 'react';
-import './App.css';
+import React, {useState, useEffect} from 'react';
+import './styles.css';
 import axios from 'axios';
 import { Header, Icon } from 'semantic-ui-react'
+import { IIdolCharacter } from '../modules/idolCharacter';
 
-class App extends Component {
 
-  state = {
-    values: []
-  }
 
-  componentDidMount(){
-    axios.get('http://localhost:5000/api/values')
-    .then((response) => {
-      console.log(response);
-      this.setState({
-        values: response.data
+const App = () => {
 
-      })
-    })
+  const [idolCharacters, setIdolCharacters] = useState<IIdolCharacter[]>([])
 
-  }
+  useEffect(() => {
+    axios
+      .get<IIdolCharacter[]>('http://localhost:5000/api/idolCharacters')
+      .then(response => {
+      setIdolCharacters(response.data)
+    });
+  }, []);
 
-  render(){
+  
     return (
       <div className="App">
         <header className="App-header">
@@ -36,14 +33,14 @@ class App extends Component {
         </header>
           <div>
             <ul>
-              {this.state.values.map((value: any) => (
-                <li key={value.id}>{value.name}</li>
+              {idolCharacters.map(idolCharacter => (
+                <li key={idolCharacter.id}>{idolCharacter.nameDefault}</li>
               ))}
             </ul>
           </div>
       </div>
     );
-  }
+  
 
 }
 
