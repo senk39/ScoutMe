@@ -20,25 +20,12 @@ code {
   list-style-position: inside;
 }
 
-
-
-.App-header {
-  background-color: #e7479e;
-  min-height: 30vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: #f6cbe2;
-}
-
 .App-link {
   color: #61dafb;
 }
 
 #headericon{
-  color: #f6cbe2;
+  color: #e7479e;
 }
 
 #Subheader {
@@ -50,3 +37,10 @@ code {
   color: #f8dfec;
 }
 
+header img{
+ 
+  vertical-align: middle;
+  max-height: 25px;
+  max-width: 160px;
+  
+}
