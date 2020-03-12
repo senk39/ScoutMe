@@ -1,20 +1,20 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f9eef4;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 .App {
   text-align: center;
-  background-color: #f9eef4;
   min-height: 100vh;
   color: #2d2d2d;
   list-style-position: inside;
@@ -24,23 +24,61 @@ code {
   color: #61dafb;
 }
 
-#headericon{
+#headericon {
   color: #e7479e;
 }
 
 #Subheader {
-  color: blueviolet !important; 
+  color: blueviolet !important;
 }
 
-
-#headerTitle, #headerDescription{
+#headerTitle,
+#headerDescription {
   color: #f8dfec;
 }
 
-header img{
- 
+.ui.menu {
+  background-color: #e7479e;
+}
+
+/* .ui.menu .item:first-of-type {
+  
+  margin: 0 0  0 30%;
+} */
+
+.ui.menu .item {
+  color: #f8dfec;
+}
+
+/* .ui.container {
+margin-right:50px;
+border: dotted;
+RAMKA DO TESTU
+
+} */
+
+.logoPadding img {
   vertical-align: middle;
   max-height: 25px;
-  max-width: 160px;
-  
+  max-width: 180px;
+}
+
+.emptySpaceInTopMenu {
+  margin-right: 18%;
+}
+
+.contentContainer {
+  /* 170px jest bez odstepu */
+  margin-top: 220px;
+}
+
+@media only screen and (min-width: 768px) {
+  .logoPadding {
+    margin-left: 25%;
+  }
+
+  .contentContainer {
+    /* 100px jest bez odstepu */
+    margin-top: 100px;
+  }
 }

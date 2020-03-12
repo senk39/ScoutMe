@@ -27,7 +27,7 @@ const App = () => {
             
          
         </header>
-          <div>
+          <div className="contentContainer">
             <ul>
               {idolCharacters.map(idolCharacter => (
                 <li key={idolCharacter.id}>{idolCharacter.nameDefault}</li>
