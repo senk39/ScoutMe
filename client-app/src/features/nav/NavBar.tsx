@@ -1,5 +1,5 @@
-import React, {Fragment} from "react";
-import { Menu, Icon, Container } from "semantic-ui-react";
+import React from "react";
+import { Menu, Container } from "semantic-ui-react";
 //import logo from "../../../public/assets/logo.png";
 
 export const NavBar = () => {
