@@ -7,7 +7,7 @@ export const IdolCharacterList = () => {
              <Grid columns={3} divided>
     <Grid.Row>
       <Grid.Column>
-        <Image src='/images/wireframe/media-paragraph.png' />
+        <Image src='././././assets/Chika.png' />
       </Grid.Column>
       <Grid.Column>
         <Image src='/images/wireframe/media-paragraph.png' />
