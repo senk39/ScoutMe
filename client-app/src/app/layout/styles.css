@@ -85,7 +85,7 @@ RAMKA DO TESTU
 }
 
 .IdolListGrid {
-  border: dotted;
+  /* border: dotted; */
   margin-left: 0;
   margin-top: 10vh;
   align-self: center;
@@ -102,4 +102,43 @@ RAMKA DO TESTU
   min-height: 100vh !important;
   
   
+}
+
+.idolImage {
+  /* 164px */
+  border-radius: 50%;
+  
+  border: 7px solid white;
+  z-index: 5;
+  max-width: 100%;
+  /* position: relative; */
+}
+
+.idolImageBorder {
+  height: 170px;
+  width: 170px;
+  background-color: #e7479e; 
+  border-radius: 50%;
+  position: absolute; 
+  z-index: 0;
+  left: 11px;
+  top: -3px;
+  opacity: 50%;
+  box-shadow: 3px 3px 5px #e3d8de;
+ 
+  /* position: relative; */
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+
+}
+
+.idolBorder{
+  z-index: 4;
+  width: 100vh;
+  
+  position: absolute !important;
+  top: 0vh;
+  left: 0vh;
+
 }
