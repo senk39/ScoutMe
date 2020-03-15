@@ -67,27 +67,15 @@ RAMKA DO TESTU
   margin-right: 18%;
 }
 
-/* .contentContainer {
-  170px jest bez odstepu 
-  margin-top: 220px;
-} */
-
-@media only screen and (min-width: 768px) {
-  .logoPadding {
-    margin-left: 25%;
-  }
-
-  /* .contentContainer {
-    100px jest bez odstepu
-    margin-top: 100px;
-  } */
-
-}
+ .contentContainer {
+  /* 170px jest bez odstepu  */
+  margin-top: 50px;
+} 
 
 .IdolListGrid {
   /* border: dotted; */
   margin-left: 0;
-  margin-top: 10vh;
+  margin-top: 30vh;
   align-self: center;
 }
 
@@ -104,41 +92,29 @@ RAMKA DO TESTU
   
 }
 
-.idolImage {
-  /* 164px */
-  border-radius: 50%;
-  
-  border: 7px solid white;
-  z-index: 5;
-  max-width: 100%;
-  /* position: relative; */
-}
+.ui.orange.label{
 
-.idolImageBorder {
-  height: 170px;
-  width: 170px;
-  background-color: #e7479e; 
-  border-radius: 50%;
-  position: absolute; 
-  z-index: 0;
-  left: 11px;
-  top: -3px;
-  opacity: 50%;
-  box-shadow: 3px 3px 5px #e3d8de;
- 
-  /* position: relative; */
+  margin-left: 0;
+  margin-right: 0;
+  align-self: center;
+  border:dotted;
   display: inline-block;
-  vertical-align: middle;
-  max-width: 100%;
-
 }
 
-.idolBorder{
-  z-index: 4;
-  width: 100vh;
-  
-  position: absolute !important;
-  top: 0vh;
-  left: 0vh;
+@media only screen and (min-width: 768px) {
+  .logoPadding {
+    margin-left: 25%;
+  }
+
+  .IdolListGrid {
+    margin-top: 10vh;
+
+  }
+
+
+  /* .contentContainer {
+    100px jest bez odstepu
+    margin-top: 100px;
+  } */
 
 }

@@ -11,12 +11,14 @@ export const IdolCharacterDashboard: React.FC<IProps> = ({idolCharacters}) => {
   return (
     <Grid centered>
       <Grid.Column width={10}>
-        {/* <List>
+      <IdolCharacterList idolCharacters ={idolCharacters}/>
+
+        {/* { <List>
           {idolCharacters.map(idolCharacter => (
             <List.Item key={idolCharacter.id}>{idolCharacter.nameDefault}</List.Item>
           ))}
-        </List> */}
-        <IdolCharacterList />
+        </List> } */}
+        
       </Grid.Column>
     </Grid>
   );

@@ -1,45 +1,61 @@
 import React from "react";
-import { Grid, Image } from "semantic-ui-react";
+import { Grid, Image, Item, Header } from "semantic-ui-react";
+import { IIdolCharacter } from "../../../app/modules/idolCharacter";
 
-export const IdolCharacterList = () => {
+const colors = [
+  "red",
+  "orange",
+  "yellow",
+  "olive",
+  "green",
+  "teal",
+  "blue",
+  "violet",
+  "purple",
+  "pink",
+  "brown",
+  "grey",
+  "black"
+];
+
+interface IProps {
+  idolCharacters: IIdolCharacter[];
+}
+
+export const IdolCharacterList: React.FC<IProps> = ({idolCharacters})  => {
   return (
     <div className="IdolListGrid">
-      <Grid columns={3} divided>
+      <div className="ui huge pink header">µ's</div>
+      {idolCharacters.map(idolCharacter => (
+        <Item.Content>
+        <Item.Header as='a'>{idolCharacter.bustSize}</Item.Header>
+        <Item.Header as='a'>{idolCharacter.id}</Item.Header>
+        </Item.Content>
+      ))}
+      <Grid columns={3}>
         <Grid.Row>
           <Grid.Column>
             <div>
               <Image
                 className="idolImage"
-                src="././././assets/idolCharactersProfilePics/Muse/Honoka.png"
+                src="././././assets/idolCharactersProfilePics/inCircle/Muse/Honoka.png"
               />{" "}
-              <div
-                className="idolImageBorder"
-                style={{ backgroundColor: "orange" }}
-              ></div>
             </div>
           </Grid.Column>
           <Grid.Column>
             <div>
               <Image
                 className="idolImage"
-                src="././././assets/idolCharactersProfilePics/Muse/Eli.png"
+                src="././././assets/idolCharactersProfilePics/inCircle/Muse/Eli.png"
               />{" "}
-              <div
-                className="idolImageBorder"
-                style={{ backgroundColor: "red" }}
-              ></div>
             </div>
           </Grid.Column>
           <Grid.Column>
             <div>
               <Image
                 className="idolImage"
-                src="././././assets/idolCharactersProfilePics/Muse/Hanayo.png"
+                src="././././assets/idolCharactersProfilePics/inCircle/Muse/Hanayo.png"
               />{" "}
-              <div
-                className="idolImageBorder"
-                style={{ backgroundColor: "yellow" }}
-              ></div>
             </div>
           </Grid.Column>
         </Grid.Row>
@@ -49,39 +65,24 @@ export const IdolCharacterList = () => {
             <div>
               <Image
                 className="idolImage"
-                src="././././assets/idolCharactersProfilePics/Muse/Kotori.png"
+                src="././././assets/idolCharactersProfilePics/inCircle/Muse/Kotori.png"
               />{" "}
-              <div
-                className="idolImageBorder"
-                style={{ backgroundColor: "green" }}
-              ></div>
             </div>
           </Grid.Column>
           <Grid.Column>
             <div>
               <Image
                 className="idolImage"
-                src="././././assets/idolCharactersProfilePics/Muse/Maki.png"
+                src="././././assets/idolCharactersProfilePics/inCircle/Muse/Maki.png"
               />{" "}
-              <div
-                className="idolImageBorder"
-                style={{ backgroundColor: "purple" }}
-              ></div>
             </div>
           </Grid.Column>
           <Grid.Column>
             <div>
               <Image
                 className="idolImage"
-                src="././././assets/idolCharactersProfilePics/Muse/Nico.png"
+                src="././././assets/idolCharactersProfilePics/inCircle/Muse/Nico.png"
               />
-              <div>
-                {" "}
-                <Image
-                  className="idolBorder"
-                  src="././././assets/idolCharactersProfilePics/colorBorders/lightPink.png"
-                />
-              </div>
             </div>
           </Grid.Column>
         </Grid.Row>
@@ -91,36 +92,52 @@ export const IdolCharacterList = () => {
             <div>
               <Image
                 className="idolImage"
-                src="././././assets/idolCharactersProfilePics/Muse/Nozomi.png"
+                src="././././assets/idolCharactersProfilePics/inCircle/Muse/Nozomi.png"
               />{" "}
-              <div
-                className="idolImageBorder"
-                style={{ backgroundColor: "magenta" }}
-              ></div>
             </div>
           </Grid.Column>
           <Grid.Column>
             <div>
               <Image
                 className="idolImage"
-                src="././././assets/idolCharactersProfilePics/Muse/Rin.png"
+                src="././././assets/idolCharactersProfilePics/inCircle/Muse/Rin.png"
               />{" "}
-              <div
-                className="idolImageBorder"
-                style={{ backgroundColor: "gray" }}
-              ></div>
             </div>
           </Grid.Column>
           <Grid.Column>
             <div>
               <Image
                 className="idolImage"
-                src="././././assets/idolCharactersProfilePics/Muse/Umi.png"
+                src="././././assets/idolCharactersProfilePics/inCircle/Muse/Umi.png"
               />{" "}
-              <div
-                className="idolImageBorder"
-                style={{ backgroundColor: "blue" }}
-              ></div>
+            </div>
+          </Grid.Column>
+        </Grid.Row>
+
+        <div className="ui huge pink header">Aqours</div>
+        <Grid.Row>
+          <Grid.Column>
+            <div>
+              <Image
+                className="idolImage"
+                src="././././assets/idolCharactersProfilePics/inCircle/Aqours/Chika.png"
+              />{" "}
+            </div>
+          </Grid.Column>
+          <Grid.Column>
+            <div>
+              <Image
+                className="idolImage"
+                src="././././assets/idolCharactersProfilePics/inCircle/Aqours/Dia.png"
+              />{" "}
+            </div>
+          </Grid.Column>
+          <Grid.Column>
+            <div>
+              <Image
+                className="idolImage"
+                src="././././assets/idolCharactersProfilePics/inCircle/Aqours/Hanamaru.png"
+              />{" "}
             </div>
           </Grid.Column>
         </Grid.Row>
@@ -130,36 +147,24 @@ export const IdolCharacterList = () => {
             <div>
               <Image
                 className="idolImage"
-                src="././././assets/idolCharactersProfilePics/Aqours/Chika.png"
+                src="././././assets/idolCharactersProfilePics/inCircle/Aqours/Kanan.png"
               />{" "}
-              <div
-                className="idolImageBorder"
-                style={{ backgroundColor: "orange" }}
-              ></div>
             </div>
           </Grid.Column>
           <Grid.Column>
             <div>
               <Image
                 className="idolImage"
-                src="././././assets/idolCharactersProfilePics/Aqours/Dia.png"
+                src="././././assets/idolCharactersProfilePics/inCircle/Aqours/Mari.png"
               />{" "}
-              <div
-                className="idolImageBorder"
-                style={{ backgroundColor: "red" }}
-              ></div>
             </div>
           </Grid.Column>
           <Grid.Column>
             <div>
               <Image
                 className="idolImage"
-                src="././././assets/idolCharactersProfilePics/Aqours/Hanamaru.png"
+                src="././././assets/idolCharactersProfilePics/inCircle/Aqours/Riko.png"
               />{" "}
-              <div
-                className="idolImageBorder"
-                style={{ backgroundColor: "yellow" }}
-              ></div>
             </div>
           </Grid.Column>
         </Grid.Row>
@@ -169,36 +174,52 @@ export const IdolCharacterList = () => {
             <div>
               <Image
                 className="idolImage"
-                src="././././assets/idolCharactersProfilePics/Aqours/Kanan.png"
+                src="././././assets/idolCharactersProfilePics/inCircle/Aqours/Ruby.png"
               />{" "}
-              <div
-                className="idolImageBorder"
-                style={{ backgroundColor: "green" }}
-              ></div>
             </div>
           </Grid.Column>
           <Grid.Column>
             <div>
               <Image
                 className="idolImage"
-                src="././././assets/idolCharactersProfilePics/Aqours/Mari.png"
+                src="././././assets/idolCharactersProfilePics/inCircle/Aqours/Yoshiko.png"
               />{" "}
-              <div
-                className="idolImageBorder"
-                style={{ backgroundColor: "purple" }}
-              ></div>
             </div>
           </Grid.Column>
           <Grid.Column>
             <div>
               <Image
                 className="idolImage"
-                src="././././assets/idolCharactersProfilePics/Aqours/Riko.png"
+                src="././././assets/idolCharactersProfilePics/inCircle/Aqours/You.png"
               />{" "}
-              <div
-                className="idolImageBorder"
-                style={{ backgroundColor: "lightpink" }}
-              ></div>
+            </div>
+          </Grid.Column>
+        </Grid.Row>
+
+        <div className="ui huge pink header">Nijigasaki High School Idol Club</div>
+        <Grid.Row>
+          <Grid.Column>
+            <div>
+              <Image
+                className="idolImage"
+                src="././././assets/idolCharactersProfilePics/inCircle/Nijigasaki/Ai.png"
+              />{" "}
+            </div>
+          </Grid.Column>
+          <Grid.Column>
+            <div>
+              <Image
+                className="idolImage"
+                src="././././assets/idolCharactersProfilePics/inCircle/Nijigasaki/Ayumu.png"
+              />{" "}
+            </div>
+          </Grid.Column>
+          <Grid.Column>
+            <div>
+              <Image
+                className="idolImage"
+                src="././././assets/idolCharactersProfilePics/inCircle/Nijigasaki/Emma.png"
+              />{" "}
             </div>
           </Grid.Column>
         </Grid.Row>
@@ -208,36 +229,24 @@ export const IdolCharacterList = () => {
             <div>
               <Image
                 className="idolImage"
-                src="././././assets/idolCharactersProfilePics/Aqours/Ruby.png"
+                src="././././assets/idolCharactersProfilePics/inCircle/Nijigasaki/Kanata.png"
               />{" "}
-              <div
-                className="idolImageBorder"
-                style={{ backgroundColor: "magenta" }}
-              ></div>
             </div>
           </Grid.Column>
           <Grid.Column>
             <div>
               <Image
                 className="idolImage"
-                src="././././assets/idolCharactersProfilePics/Aqours/Yoshiko.png"
+                src="././././assets/idolCharactersProfilePics/inCircle/Nijigasaki/Karin.png"
               />{" "}
-              <div
-                className="idolImageBorder"
-                style={{ backgroundColor: "gray" }}
-              ></div>
             </div>
           </Grid.Column>
           <Grid.Column>
             <div>
               <Image
                 className="idolImage"
-                src="././././assets/idolCharactersProfilePics/Aqours/You.png"
+                src="././././assets/idolCharactersProfilePics/inCircle/Nijigasaki/Kasumi.png"
               />{" "}
-              <div
-                className="idolImageBorder"
-                style={{ backgroundColor: "blue" }}
-              ></div>
             </div>
           </Grid.Column>
         </Grid.Row>
@@ -247,114 +256,24 @@ export const IdolCharacterList = () => {
             <div>
               <Image
                 className="idolImage"
-                src="././././assets/idolCharactersProfilePics/Nijigasaki/Ai.png"
+                src="././././assets/idolCharactersProfilePics/inCircle/Nijigasaki/Rina.png"
               />{" "}
-              <div
-                className="idolImageBorder"
-                style={{ backgroundColor: "orange" }}
-              ></div>
             </div>
           </Grid.Column>
           <Grid.Column>
             <div>
               <Image
                 className="idolImage"
-                src="././././assets/idolCharactersProfilePics/Nijigasaki/Ayumu.png"
+                src="././././assets/idolCharactersProfilePics/inCircle/Nijigasaki/Setsuna.png"
               />{" "}
-              <div
-                className="idolImageBorder"
-                style={{ backgroundColor: "red" }}
-              ></div>
             </div>
           </Grid.Column>
           <Grid.Column>
             <div>
               <Image
                 className="idolImage"
-                src="././././assets/idolCharactersProfilePics/Nijigasaki/Emma.png"
+                src="././././assets/idolCharactersProfilePics/inCircle/Nijigasaki/Shizuku.png"
               />{" "}
-              <div
-                className="idolImageBorder"
-                style={{ backgroundColor: "yellow" }}
-              ></div>
-            </div>
-          </Grid.Column>
-        </Grid.Row>
-
-        <Grid.Row>
-          <Grid.Column>
-            <div>
-              <Image
-                className="idolImage"
-                src="././././assets/idolCharactersProfilePics/Nijigasaki/Kanata.png"
-              />{" "}
-              <div
-                className="idolImageBorder"
-                style={{ backgroundColor: "green" }}
-              ></div>
-            </div>
-          </Grid.Column>
-          <Grid.Column>
-            <div>
-              <Image
-                className="idolImage"
-                src="././././assets/idolCharactersProfilePics/Nijigasaki/Karin.png"
-              />{" "}
-              <div
-                className="idolImageBorder"
-                style={{ backgroundColor: "purple" }}
-              ></div>
-            </div>
-          </Grid.Column>
-          <Grid.Column>
-            <div>
-              <Image
-                className="idolImage"
-                src="././././assets/idolCharactersProfilePics/Nijigasaki/Kasumi.png"
-              />{" "}
-              <div
-                className="idolImageBorder"
-                style={{ backgroundColor: "lightpink" }}
-              ></div>
-            </div>
-          </Grid.Column>
-        </Grid.Row>
-
-        <Grid.Row>
-          <Grid.Column>
-            <div>
-              <Image
-                className="idolImage"
-                src="././././assets/idolCharactersProfilePics/Nijigasaki/Rina.png"
-              />{" "}
-              <div
-                className="idolImageBorder"
-                style={{ backgroundColor: "magenta" }}
-              ></div>
-            </div>
-          </Grid.Column>
-          <Grid.Column>
-            <div>
-              <Image
-                className="idolImage"
-                src="././././assets/idolCharactersProfilePics/Nijigasaki/Setsuna.png"
-              />{" "}
-              <div
-                className="idolImageBorder"
-                style={{ backgroundColor: "gray" }}
-              ></div>
-            </div>
-          </Grid.Column>
-          <Grid.Column>
-            <div>
-              <Image
-                className="idolImage"
-                src="././././assets/idolCharactersProfilePics/Nijigasaki/Shizuku.png"
-              />{" "}
-              <div
-                className="idolImageBorder"
-                style={{ backgroundColor: "blue" }}
-              ></div>
             </div>
           </Grid.Column>
         </Grid.Row>
