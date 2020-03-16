@@ -1,5 +1,4 @@
 body {
-  
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -67,10 +66,10 @@ RAMKA DO TESTU
   margin-right: 18%;
 }
 
- .contentContainer {
+.contentContainer {
   /* 170px jest bez odstepu  */
   margin-top: 50px;
-} 
+}
 
 .IdolListGrid {
   /* border: dotted; */
@@ -79,8 +78,7 @@ RAMKA DO TESTU
   align-self: center;
 }
 
- .backgroundBox {
-  
+.backgroundBox {
   width: 50%;
   background-color: #fbf6f9;
   margin-left: auto;
@@ -88,16 +86,13 @@ RAMKA DO TESTU
   min-width: 768px;
   box-shadow: 3px 3px 5px #e3d8de;
   min-height: 100vh !important;
-  
-  
 }
 
-.ui.orange.label{
-
+.ui.orange.label {
   margin-left: 0;
   margin-right: 0;
   align-self: center;
-  border:dotted;
+  border: dotted;
   display: inline-block;
 }
 
@@ -108,13 +103,27 @@ RAMKA DO TESTU
 
   .IdolListGrid {
     margin-top: 10vh;
-
   }
-
 
   /* .contentContainer {
     100px jest bez odstepu
     margin-top: 100px;
   } */
+}
 
+.ui.image {
+  display: inline !important;
+  margin-right: 15px !important;
+}
+
+.paragraph {
+  display: inline-block !important;
+  margin-right: 15px !important;
+  margin-top: 15px !important;
+  max-width: 350px;
+
+}
+
+.idolDescr{
+  margin-top: 10px !important;
 }

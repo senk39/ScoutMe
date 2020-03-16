@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Image, Item, Header } from "semantic-ui-react";
+import { Grid, Image, Item, Header, Segment } from "semantic-ui-react";
 import { IIdolCharacter } from "../../../app/modules/idolCharacter";
 
 const colors = [
@@ -18,30 +18,64 @@ const colors = [
   "black"
 ];
 
+
 interface IProps {
   idolCharacters: IIdolCharacter[];
 }
 
-export const IdolCharacterList: React.FC<IProps> = ({idolCharacters})  => {
+export const IdolCharacterList: React.FC<IProps> = ({ idolCharacters }) => {
   return (
     <div className="IdolListGrid">
       <div className="ui huge pink header">µ's</div>
       {idolCharacters.map(idolCharacter => (
         <Item.Content>
-        <Item.Header as='a'>{idolCharacter.bustSize}</Item.Header>
-        <Item.Header as='a'>{idolCharacter.id}</Item.Header>
+          <Item.Header as="a">{idolCharacter.bustSize}</Item.Header>
+          <Item.Header as="a">{idolCharacter.id}</Item.Header>
         </Item.Content>
       ))}
-      <Grid columns={3}>
+      <Grid columns={1}>
         <Grid.Row>
           <Grid.Column>
-            <div>
-              <Image
-                className="idolImage"
-                src="././././assets/idolCharactersProfilePics/inCircle/Muse/Honoka.png"
-              />{" "}
-            </div>
+            {idolCharacters.map(idolCharacter => (
+              <Segment>
+                <div className="ui link items">
+                  <div className="item">
+                    <div className="ui image">
+                    <img src={`././././assets/idolCharactersProfilePics/inCircle/${idolCharacter.group}/${idolCharacter.nameEng}.png`}></img>
+
+                    
+                    </div>
+
+                    <Item.Group divider>
+                      <Item key={idolCharacter.id}>
+                        <Item.Content>
+                          <Item.Header as="a">
+                            {idolCharacter.nameDefault}
+                          </Item.Header>
+                          <Item.Meta as="a">
+                            {" "}
+                            {idolCharacter.bustSize}
+                          </Item.Meta>
+                          <div className="description">Eluwina, jestem {idolCharacter.nameEng}</div>
+                          <div className="description2">Grupa: {idolCharacter.group}</div>
+                          <b><p className="idolDescr">Opis: {idolCharacter.description}</p></b>
+                        </Item.Content>
+                      </Item>
+                    </Item.Group>
+
+                    {/* <div className="header">{idolCharacter.defaultName}</div> */}
+                  </div>
+                  
+                </div>
+
+               
+              </Segment>
+            ))}
           </Grid.Column>
+        </Grid.Row>
+      </Grid>
+      <Grid columns={3}>
+        <Grid.Row>
           <Grid.Column>
             <div>
               <Image
@@ -196,7 +230,9 @@ export const IdolCharacterList: React.FC<IProps> = ({idolCharacters})  => {
           </Grid.Column>
         </Grid.Row>
 
-        <div className="ui huge pink header">Nijigasaki High School Idol Club</div>
+        <div className="ui huge pink header">
+          Nijigasaki High School Idol Club
+        </div>
         <Grid.Row>
           <Grid.Column>
             <div>
