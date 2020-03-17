@@ -27,12 +27,7 @@ export const IdolCharacterList: React.FC<IProps> = ({ idolCharacters }) => {
   return (
     <div className="IdolListGrid">
       <div className="ui huge pink header">µ's</div>
-      {idolCharacters.map(idolCharacter => (
-        <Item.Content>
-          <Item.Header as="a">{idolCharacter.bustSize}</Item.Header>
-          <Item.Header as="a">{idolCharacter.id}</Item.Header>
-        </Item.Content>
-      ))}
+
       <Grid columns={1}>
         <Grid.Row>
           <Grid.Column>
